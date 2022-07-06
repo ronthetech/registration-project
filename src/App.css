@@ -55,6 +55,7 @@
 	--clr-green-dark: #25bb32;
 	--clr-green: #6df305;
 	--clr-green-light: #6be675;
+	--clr-bright-red: rgb(255, 0, 0);
 
 	--type-green: #99d98c;
 	--type-dark-green: #76c893;
@@ -124,6 +125,10 @@ html {
 	font-size: 2rem;
 	color: var(--clr-white);
 	text-align: center;
+}
+.empty--field {
+	font-size: 1.5rem;
+	color: var(--clr-bright-red);
 }
 .form {
 	max-width: 60rem;
