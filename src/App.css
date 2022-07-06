@@ -1,38 +1,176 @@
+/*============VARIABLES=============*/
+:root {
+	/*box-shadow: offset-x|offset-y|blur-radius|color*/
+	--light-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+	--mid-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+	--dark-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+	--darkest-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.7);
+	--transition: all 0.4s linear;
+	--transition-slow: all 2s linear;
+	--letter-space-sml: 0.1rem;
+	--letter-space-mid: 0.25rem;
+	--letter-space-lrg: 0.5rem;
+	/* grey / blue - used for headings */
+	--clr-grey-blue-1: #102a42;
+	--clr-grey-blue-2: #243a52;
+	--clr-grey-blue-3: #324d67;
+	--clr-grey-blue-4: #48647f;
+	/* light grey used for paragraphs */
+	--clr-light-grey-1: #617d98;
+	--clr-light-grey-2: #829ab0;
+	--clr-light-grey-3: #9eb2c7;
+	--clr-light-grey-4: #d6dee6;
+	/* dark shades of secondary color*/
+	--clr-dark-blue-1: #063251;
+	--clr-dark-blue-2: #104e7a;
+	/* secondary/main color */
+	--clr-blue-1: #1a6aa2;
+	--clr-blue-2: #2d87c8;
+	--clr-blue-3: #49a6e9;
+	--clr-blue-4: #4da1ab;
+	--clr-blue-5: #3056df;
+	/* gradient colors */
+	--grad-main-heading: linear-gradient(to left, #1a32b5, #fc306a 10%, #1a32b5);
+	--grad-background-re-blue: linear-gradient(to bottom, #4da1ab, #305170);
+	--grad-background-blue: linear-gradient(to bottom, #305170, #4da1ab);
+	--grad-background-form: linear-gradient(to bottom right, #70306a, #063251, #70306a);
+	--grad-blue-green: linear-gradient(to bottom right, #305170, #6dfc6b);
+	--grad-green-blue: linear-gradient(to bottom right, #6dfc6b, #305170);
+	--grad-blue-purple: linear-gradient(to bottom right, rgb(6, 50, 181), #70306a);
+	--grad-purple-blue: linear-gradient(to bottom right, rgb(162, 48, 106), #063251);
+	--grad-li-purple-blue: linear-gradient(to bottom right, #fc306a, #1a32b5);
+	--grad-li-blue: linear-gradient(to bottom right, #1cadd9, #1a32b5);
+	--grad-grey-light: linear-gradient(to right bottom, rgba(#f7f7f7, 0.2), rgba(#eee, 0.2));
+	/* other colors */
+	--clr-white: #fff;
+	--clr-black: #000;
+	--clr-grey: #979b91;
+	--clr-yellow: #ffcb05;
+	--clr-yellow-dark: #c7a008;
+	--clr-yellow-light: #ffdd64;
+	--clr-orange: #ff8f00;
+	--clr-pink: #fa709a;
+	--clr-red-dark: #bb2525;
+	--clr-red-light: #e66b6b;
+	--clr-green-dark: #25bb32;
+	--clr-green: #6df305;
+	--clr-green-light: #6be675;
+
+	--type-green: #99d98c;
+	--type-dark-green: #76c893;
+	--type-red: #ff4747;
+	--type-dark-red: #c9030a;
+	--type-blue: #1cadd9;
+	--type-dark-blue-card: #1f8ec1;
+	--type-yell: #ffd15c;
+	--type-dark-yell: #fcc55f;
+	--type-purple: #b379f6;
+	--type-dark-purple: #9b15f4;
+	--type-brown: #c38e6f;
+	--type-dark-brown: #bd764c;
+	--type-dark: #6c757d;
+	--type-dark-dark: #495057;
+	--type-gray: #dee2e6;
+	--type-dark-gray: #adb5bd;
+	--type-gold: #c4a36e;
+	--type-dark-gold: #b89151;
+	--gray-light-1: #f7f7f7;
+	--gray-light-2: #eee;
+}
+
+/*======= FONTS =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+/*======= GLOBAL STYLES =======*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+/*======= APP =======*/
 .App {
-  text-align: center;
+	min-height: 100vh;
+	text-align: center;
+	background-image: var(--grad-background-re-blue);
+	padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*======= HEADER =======*/
+.main--header {
+	text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main--heading {
+	font-size: 10rem;
+	background-image: var(--grad-main-heading);
+	background-clip: text;
+	color: transparent;
+	font-family: "Poppins", sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*======= FORM =======*/
+.container {
+	text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.register--message {
+	background-image: var(--grad-li-blue);
+	max-width: fit-content;
+	margin: 0 auto;
+	padding: 1rem;
+	font-size: 2rem;
+	color: var(--clr-white);
+	text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+	max-width: 60rem;
+	background-image: var(--grad-background-form);
+	color: var(--clr-light-grey-4);
+	margin: 5rem auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	font-size: 2rem;
+	padding: 8rem 5rem;
+	justify-content: center;
+	border-radius: 1rem;
+	font-family: "Lato", sans-serif;
+	box-shadow: var(--dark-shadow);
+}
+.form > input {
+	min-width: 20rem;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+}
+.form__lastName,
+.form__firstName {
+	font-size: 2rem;
+}
+.form__password {
+	font-size: 2rem;
+}
+.form__btn {
+	background-image: var(--grad-purple-blue);
+	color: var(--clr-white);
+	font-size: 3rem;
+	border: 1px solid var(--clr-blue-1);
+	border-radius: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	max-width: fit-content;
+	align-self: center;
+	transition: var(--transition);
+	box-shadow: var(--mid-shadow);
+}
+.form__btn:hover,
+.form__btn:focus {
+	background-image: var(--grad-li-purple-blue);
+	cursor: pointer;
+	transform: translateY(-0.5rem);
+	box-shadow: var(--dark-shadow);
+	color: var(--clr-light-grey-4);
 }
